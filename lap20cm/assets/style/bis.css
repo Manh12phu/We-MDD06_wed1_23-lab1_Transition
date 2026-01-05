@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+.but1{
+    align-content: center;
+    font-size: 34px;
+    background-color: #33FF33;
+    border-radius: 20px; 
+    padding: 25px;
+    transition: background-color 5s  ease;
+}
+.but1:hover{
+background-color: black;
+}
