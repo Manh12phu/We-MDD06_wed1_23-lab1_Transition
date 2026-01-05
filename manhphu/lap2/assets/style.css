@@ -23,13 +23,14 @@ section{
 
 }
 @keyframes meme {
-    0%{transform: translateX(-35%);}
+    0%{transform: translateX(-30%);}
      50%{transform: translateX(40%);}
-    100%{transform: translateX(-35%);}
+    100%{transform: translateX(-30%);}
 
 
 
 }
+
 
 
 
