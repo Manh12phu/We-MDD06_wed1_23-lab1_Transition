@@ -21,28 +21,18 @@ section{
     text-align: center;
 }
 .manhphu p{
-    animation: meme 2s ease-in infinite;
+    animation: meme 15s ease-in infinite;
 
 
 }
 @keyframes meme {
-    0%{transform: translateX(-40%);}
-     50%{transform: translateX(50%);}
-    100%{transform: translateX(-40%);}
+    0%{transform: translateX(-45%);}
+     50%{transform: translateX(45%);}
+    100%{transform: translateX(-45%);}
 
 
 
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
