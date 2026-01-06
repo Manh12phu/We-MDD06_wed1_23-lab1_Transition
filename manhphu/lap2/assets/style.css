@@ -5,6 +5,9 @@ body{
 }
 section{ 
     overflow: hidden;
+    border: 2px solid green;
+	border-radius: 25px;
+    
 }
 #title{
     background-color: aqua;
@@ -30,6 +33,7 @@ section{
 
 
 }
+
 
 
 
