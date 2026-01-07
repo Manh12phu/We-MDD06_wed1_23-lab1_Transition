@@ -21,9 +21,7 @@ background-color: rgb(255, 5, 255);
 	animation: scal1 1s ease-in forwards;
 
 }
-#img:hover{
-	animation: scal2 1s ease-in forwards;
-}
+
 @keyframes scal1 {
 	0%{
 		transform: scale(1.2);
@@ -32,13 +30,8 @@ background-color: rgb(255, 5, 255);
 		transform: scale(1);
 	}
 }
-@keyframes scal2 {
-	0%{
-		transform: scale(1);
-	}
-	100%{
-		transform: scale(1.2);
-	}
+#img:hover{
+	animation: scal2 1s ease-in forwards;
 }
 #bucanh{
 	height: 60vh;
@@ -46,6 +39,14 @@ background-color: rgb(255, 5, 255);
 	overflow: hidden;
 	border: 3px solid brown;
 	border-radius: 20px;
+}
+@keyframes scal2 {
+	0%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(1.2);
+	}
 }
 
 .gachngang {
