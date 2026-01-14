@@ -1,0 +1,177 @@
+body{
+	background-color:rgb(255, 255, 255);
+	color:rgb(73, 1, 255);
+	font-size: 25px;
+
+
+}
+.lightmode{
+	background-color: white;
+	color: black;
+	font-size: 25px;
+
+}
+section{ 
+    overflow: hidden;
+    border: 2px solid green;
+	border-radius: 25px;
+    
+}
+#title{
+    background-color: aqua;
+    text-align: center;
+    padding: 10px;
+
+}
+
+
+.reveal {
+	opacity: 0;
+	transform: translateY(50px); 
+	transition: all 1s ease-out; 
+  }
+  
+.reveal.active {
+	opacity: 1;
+	transform: translateY(0);
+  }
+  .hondai a {
+    position: relative;
+    text-decoration: none;
+}
+
+.hondai a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #007bff;
+    transition: 0.4s;
+}
+
+.hondai a:hover::after {
+    left: 0;
+    width: 100%;
+}
+
+.heading {
+    opacity: 0;
+    transition: opacity 2s ease;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: brown;
+}
+
+
+.heading{
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.marquee{
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+}
+.marquee p{
+    animation: meme 5s ease-in infinite;
+
+
+}
+@keyframes meme {
+    0%{transform: translateX(-42%);}
+     50%{transform: translateX(45%);}
+    100%{transform: translateX(10%);}
+}
+.box {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s;
+}
+
+.box.show {
+    opacity: 1;
+    transform: translateY(0);
+}.card {
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(255, 179, 2, 0.927);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(255, 0, 0, 0.4);
+}
+.gallery img {
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.reveal{
+    min-height: 100vh;
+}
+.muangay{
+    background-color: rgb(6, 232, 244);
+    font-size: 3rem;
+    transition: 0.3s;
+}
+.muangay:hover{
+    animation: blink 1s infinite alternate;
+}
+@keyframes blink{
+
+    0% {
+        transform: scale(1) translateY(0px);
+        background-color: rgb(6, 232, 244);
+      }
+      50% {
+        transform: scale(1.05) translateY(-10px);
+        background-color: rgb(4, 0, 255) ;
+      }
+      100% {
+        transform: scale(1) translateY(0px);
+        background-color: rgb(6, 232, 244);
+      }
+
+}
+body.dark {
+    background: #ffffff;
+	color:rgb(73, 1, 255);
+  }
+  
+  button {
+    font-size: 34px;
+    background-color: #227be0;
+    border-radius: 20px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+button:hover {
+    background-color: rgb(218, 4, 104);
+	color:rgb(73, 1, 255);
+}
+.cursor{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: red;
+    position: fixed;
+    pointer-events: none; 
+    transform: translate(-50%, -50%);
+}
