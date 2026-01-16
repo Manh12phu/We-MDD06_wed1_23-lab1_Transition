@@ -1,9 +1,13 @@
 body{
 	background-color:rgb(0, 0, 0);
-	color:rgb(73, 1, 255);
+	color:rgb(1, 124, 255);
 	font-size: 25px;
+    padding-top: 70px;
 
-
+}
+.tide{	color:rgb(255, 1, 1);}
+.chu{
+    color:rgb(255, 255, 255);
 }
 .lightmode{
 	background-color: white;
@@ -11,19 +15,32 @@ body{
 	font-size: 25px;
 
 }
-section{ 
+.mm{ 
+    overflow: hidden;
+    border: 2px solid rgb(128, 0, 0);
+	border-radius: 25px;
+
+}
+.reveal{
+     position: fixed;    
+    top: 0;
+    left: 0;
+    width: 100%;
     overflow: hidden;
     border: 2px solid green;
-	border-radius: 25px;
-    
-}
+    background-color:rgb(155, 23, 23);
+	border: 25px;
+ }
 #title{
     background-color: aqua;
     text-align: center;
     padding: 10px;
 
 }
-
+.reveal {
+    margin-left: 0;
+    margin-right: auto;
+}
 
 .reveal {
 	opacity: 0;
@@ -35,7 +52,14 @@ section{
 	opacity: 1;
 	transform: translateY(0);
   }
-  .hondai a {
+  .hondai {
+    display: inline-block;   
+    width: fit-content;
+    height: auto;
+    padding: 10px 16px;
+}
+
+.hondai a {
     position: relative;
     text-decoration: none;
 }
@@ -43,18 +67,18 @@ section{
 .hondai a::after {
     content: "";
     position: absolute;
-    left: 50%;
+    left: 0;           
     bottom: -4px;
-    width: 0;
+    width: 0;           
     height: 2px;
     background: #007bff;
-    transition: 0.4s;
+    transition: width 0.4s ease;
 }
 
 .hondai a:hover::after {
-    left: 0;
-    width: 100%;
+    width: 100%;         
 }
+
 
 .heading {
     opacity: 0;
@@ -84,7 +108,7 @@ section{
     text-align: center;
 }
 .marquee p{
-    animation: meme 5s ease-in infinite;
+    animation: meme 20s ease-in infinite;
 
 
 }
@@ -104,7 +128,7 @@ section{
     transform: translateY(0);
 }.card {
     transition: all 0.3s;
-    box-shadow: 0 4px 8px rgba(255, 179, 2, 0.927);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.927);
 }
 
 .card:hover {
@@ -123,55 +147,124 @@ section{
     justify-content: center;
     gap: 30px;
 }
-.reveal{
-    min-height: 100vh;
+.muahang-section {
+    width: 100%;
+    background: #111;
+    color: white;
+
+    padding: 50px 60px;
+    box-sizing: border-box;
 }
+
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+
+.content {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    width: 220px;
+    background: #222;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
 .muangay{
-    background-color: rgb(6, 232, 244);
+    background-color: rgb(0, 0, 0);
     font-size: 3rem;
     transition: 0.3s;
+    color:rgb(255, 255, 255);
 }
-.muangay:hover{
+.muangay{
     animation: blink 1s infinite alternate;
+    color:rgb(114, 92, 92);
 }
 @keyframes blink{
 
     0% {
         transform: scale(1) translateY(0px);
-        background-color: rgb(6, 232, 244);
+        background-color: rgb(255, 0, 0);
       }
       50% {
         transform: scale(1.05) translateY(-10px);
-        background-color: rgb(4, 0, 255) ;
+        background-color: rgb(0, 0, 0) ;
       }
       100% {
         transform: scale(1) translateY(0px);
-        background-color: rgb(6, 232, 244);
+        background-color: rgb(255, 0, 0);
       }
 
 }
 body.dark {
     background: #ffffff;
-	color:rgb(73, 1, 255);
+	color:rgb(0, 0, 0);
+    
   }
   
-  button {
+button {
     font-size: 34px;
-    background-color: #227be0;
+    background-color: #ffffff;
     border-radius: 20px;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
-
-button:hover {
-    background-color: rgb(218, 4, 104);
-	color:rgb(73, 1, 255);
-}
 .cursor{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: red;
-    position: fixed;
-    pointer-events: none; 
-    transform: translate(-50%, -50%);
+    width:20px;
+    height:20px;
+    background:red;
+    border-radius:50%;
+    position:fixed;
+}
+
+.movie-section{
+    min-height:100vh;
+    background:#541d1d;
+    color:#fff;
+}
+
+
+
+.movie-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+
+.movie-body {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.movie-image {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;      
+    gap: 12px;                
+}
+
+.movie-image img {
+    width: 260px;
+    border-radius: 12px;
+}
+
+
+.movie-content {
+    flex: 1;
+    line-height: 1.8;
 }
