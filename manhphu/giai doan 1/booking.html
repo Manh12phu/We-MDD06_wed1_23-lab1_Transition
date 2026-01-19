@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Mua vé</title>
-  <link rel="stylesheet" href="./assets/css/">
+  <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
 
@@ -14,11 +14,35 @@
   </ul>
 </nav>
 
-<section class="movie-section">
-  <h2 id="movieTitle"></h2>
-  <button class="cta-btn">🎫 Xác nhận mua vé</button>
+<section class="booking-section">
+  <div class="booking-card">
+
+    <img id="moviePoster" class="booking-poster" src="" alt="">
+
+    <h2 id="movieTitle"></h2>
+
+    <label>Suất chiếu</label>
+    <select id="showtime">
+      <option value="75000">18:00 – 75.000đ</option>
+      <option value="90000">20:00 – 90.000đ</option>
+    </select>
+
+    <div class="seat-map">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+
+    <p>Tổng tiền: <span id="totalPrice">0</span> đ</p>
+
+    <button class="cta-btn">🎫 Xác nhận</button>
+
+  </div>
 </section>
 
-<script src="./assets/js/script.js"></script>
+<script src="./assets/js/app.js"></script>
 </body>
 </html>

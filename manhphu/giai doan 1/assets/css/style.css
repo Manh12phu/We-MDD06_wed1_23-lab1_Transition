@@ -162,3 +162,97 @@ body.light .card{background:#fff;color:#111}
   position:fixed;
   right:20px;bottom:20px;
 }
+/* ===== BOOKING PAGE ===== */
+.booking-section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0b0000,#1a0000);
+  }
+  
+  .booking-card{
+    display:flex;
+    gap:40px;
+    background:#111;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(255,0,0,.25);
+    max-width:800px;
+    width:100%;
+  }
+  
+  .booking-poster img{
+    width:260px;
+    border-radius:15px;
+    transition:.4s;
+  }
+  
+  .booking-poster img:hover{
+    transform:scale(1.05);
+  }
+  
+  .booking-info{
+    flex:1;
+  }
+  
+  .booking-info h2{
+    margin-bottom:20px;
+  }
+  
+  .booking-info label{
+    display:block;
+    margin:15px 0 5px;
+    font-weight:bold;
+  }
+  
+  .booking-info select{
+    width:100%;
+    padding:10px;
+    border-radius:8px;
+    border:none;
+    outline:none;
+  }
+  
+  /* SEATS */
+  .seat-map{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:10px;
+    margin-top:10px;
+  }
+  
+  .seat{
+    height:30px;
+    background:#333;
+    border-radius:6px;
+    cursor:pointer;
+    transition:.3s;
+  }
+  
+  .seat:hover{
+    background:#555;
+  }
+  
+  .seat.selected{
+    background:red;
+  }
+  
+  /* TOTAL */
+  .total{
+    margin:20px 0;
+    font-size:18px;
+  }
+  
+  /* LIGHT MODE */
+  body.light .booking-card{
+    background:#fff;
+    color:#111;
+  }
+  body.light .seat{
+    background:#ccc;
+  }
+  body.light .seat.selected{
+    background:#c00;
+  }
+  
