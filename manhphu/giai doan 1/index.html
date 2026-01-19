@@ -1,77 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Movie Landing Page</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <section class="reveal">
-		<ul>
-			<li class="hondai"><a href="#aa">PHIM NỖI BẬT</a></li>
-			<li class="hondai"><a href="#muahang">CÁC PHẦN PHIM KHÁC</a></li>
 
-            <button id="nut">Đổi nền</button>
-      </section>
-		</ul>
-        
-	</section>
-    <section class="mm">
-        <div class="marquee">
-            <p>PHIM MỚI KHUYẾN MÃI</p>
-        </div>
-    </section>
-<section class="movie-section" id="aa" >
-    <h2 class="movie-title"></h2>
+<div class="cursor"></div>
 
-    <div class="movie-body">
-<div class="movie-image">
-    <img src="./assets/ItChapterTwoTeaser.jpg" alt="Phim">
-    <button class="muangay">Mua ngay</button>
-</div>
+<button id="toggleTheme">🌙</button>
 
+<nav class="navbar">
+  <ul>
+    <li><a href="#home" class="nav-link active">Trang chủ</a></li>
+    <li><a href="#movies" class="nav-link">Phim nổi bật</a></li>
+    <li><a href="#series" class="nav-link">Các phần khác</a></li>
+  </ul>
+</nav>
 
-        <div class="movie-content">
-            <center>
-            <p class="tide">PENNYWISE 2</p>
-            </center>
-            <p class="chu">Pennywise trong phim (dựa trên tiểu thuyết kinh điển It của Stephen King) là một thực thể tà ác, biến hình, dùng hình dạng chú hề nhảy múa (Pennywise the Dancing Clown) để dụ dỗ và ăn thịt trẻ em ở thị trấn Derry, Maine, chủ yếu khai thác nỗi sợ hãi và trở lại sau mỗi 27 năm để khủng bố nhóm bạn "Losers' Club"</p>
-        </div>
-    </div>
+<!-- HERO -->
+<section id="home" class="hero">
+  <h1 class="hero-title">ĐẶT VÉ XEM PHIM ONLINE</h1>
+  <div class="marquee">
+    <p>🔥 PHIM MỚI – GIẢM GIÁ CUỐI TUẦN – ĐẶT VÉ NGAY 🔥</p>
+  </div>
 </section>
 
-
-
-
-
-    <section class="muahang-section" id="muahang">
-    <h2 class="section-title">CÁC PHẦN PHIM KHÁC</h2>
-
-    <div class="content">
-        <div class="card box">
-            <img src="./assets/It-chuhemaquai-apphich.jpeg" alt="">
-            <h3>IT SS1</h3>
-            <p>Khởi đầu </p>
-        </div>
-
-        <div class="card box">
-            <img src="./assets/z7437887928385_8128671cfe951c996a6ca42358b3bd36.jpg" alt="">
-            <h3>IT SS2</h3>
-            <p>KẾT THÚC</p>
-        </div>
-
-        <div class="card box">
-            <img src="./assets/z7437896020632_b0b320701e87be8b53797119d3431cc4.jpg" alt="">
-            <h3>IT SS3</h3>
-            <p>TIỀN TRUYỆN</p>
-        </div>
+<!-- MOVIE FEATURE -->
+<section id="movies" class="movie-section reveal">
+  <div class="movie-body">
+    <div class="movie-image">
+      <a href="./booking.html?movie=it1">
+        <img src="./assets/img/It-chuhemaquai-apphich.jpeg">
+      </a>
+      <button class="cta-btn">Mua vé</button>
     </div>
+
+    <div class="movie-content">
+      <h2>IT – Chapter 1</h2>
+      <p>
+        Pennywise – thực thể tà ác đội lốt chú hề, trở lại sau mỗi 27 năm
+        để gieo rắc nỗi sợ hãi tại thị trấn Derry.
+      </p>
+    </div>
+  </div>
 </section>
 
+<!-- SERIES -->
+<section id="series" class="series-section reveal">
+  <h2 class="section-title">CÁC PHẦN PHIM KHÁC</h2>
 
-      <div class="cursor"></div>
-    <script src="./assets/script.js"></script>
-    
+  <div class="card-grid">
+    <div class="card">
+      <a href="./booking.html?movie=it1">
+        <img src="./assets/img/ItChapterTwoTeaser.jpg">
+      </a>
+      <h4>IT – Chapter 1</h4>
+    </div>
+
+    <div class="card">
+      <a href="./booking.html?movie=it2">
+        <img src="./assets/img/z7437887928385_8128671cfe951c996a6ca42358b3bd36.jpg">
+      </a>
+      <h4>IT – Chapter 2</h4>
+    </div>
+  </div>
+</section>
+
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
