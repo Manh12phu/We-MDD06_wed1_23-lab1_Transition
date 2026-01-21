@@ -1,50 +1,57 @@
-/* Overall body styling */
-body {
-    background-color: black;
-    font-size: 1.6rem; /* Use rem for better scaling */
-    color: #33FF33;
-    font-family: 'Arial', sans-serif; /* Improved font choice */
+/* Reset */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Box styling */
-.box {
-    overflow: hidden;
-    display: inline-block;
-    width: 18vw;
-    max-width: 350px; /* Max width to prevent over-expansion on large screens */
-    height: 40vh;
-    max-height: 400px; /* Max height for better consistency */
+/* Body */
+body {
+    background-color: #000;
+    color: #33ff33;
+    font-family: Arial, sans-serif;
+    font-size: 1.6rem;
+    min-height: 100vh;
+}
+
+/* Grid layout */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Card */
+.card {
+    background-color: #000;
     border: 2px solid purple;
     border-radius: 20px;
-    margin: 2vw;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-}
-
-/* Image inside the box */
-.box img {
-    border-bottom: 2px dotted purple;
-    width: 100%;
-    height: auto; /* Maintain image aspect ratio */
-    object-fit: cover; /* Ensure the image fills the space appropriately */
-}
-
-/* Box hover effect */
-.box:hover {
-    transform: translateY(-10px); /* Slightly lift the box on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Enhance shadow on hover */
-}
-
-/* Anchor link styling */
-a {
+    overflow: hidden;
     text-decoration: none;
-    color: inherit; /* Ensure link inherits the green text color */
-    transition: color 0.3s ease; /* Smooth color transition for hover effect */
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Anchor link hover effect */
-a:hover {
-    color: yellow; /* Highlight links on hover */
+/* Image */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px dotted purple;
+}
+
+/* Text */
+.card p {
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+/* Hover & focus */
+.card:hover,
+.card:focus-visible {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(128, 0, 128, 0.7);
+    color: yellow;
 }
