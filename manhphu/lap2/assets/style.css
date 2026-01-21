@@ -1,126 +1,81 @@
-body{
-    background-color: rgb(0, 0, 0);
-    color: brown;
-    font-size: 25px;
-}
-section{ 
-    overflow: hidden;
-    border: 2px solid green;
-	border-radius: 25px;
-    
-}
-#title{
-    background-color: aqua;
+body {
+    font-family: Arial;
     text-align: center;
-    padding: 10px;
-
 }
-.marquee{
+
+.marquee {
     overflow: hidden;
     white-space: nowrap;
-    text-align: center;
 }
-.marquee p{
-    animation: meme 15s ease-in infinite;
-
-
+.marquee p {
+    animation: moveText 10s linear infinite;
 }
-@keyframes meme {
-    0%{transform: translateX(-45%);}
-     50%{transform: translateX(45%);}
-    100%{transform: translateX(-45%);}
-
-
-
+@keyframes moveText {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
 }
-.box{
-    
-    border: 2px solid red;
-    height: 20vh;
-    width: 20vh;
-    padding: 1vw;
-    margin: 3vw;
-}
+
 .box {
-    animation: momo 2s linear infinite;
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin: 20px auto;
+    animation: rotateBox 3s linear infinite;
 }
-@keyframes momo {
-    0%{transform: rotate(0deg);}
-    100%{transform: rotate(360deg);}
-
-}
-
-#s1{
-    animation: mimi 1s ease forwards infinite;
-}
-#s2{
-    animation: mimi 1.5s ease forwards infinite;
-}
-#s3{
-    animation: mimi 2s ease forwards infinite;
+@keyframes rotateBox {
+    to { transform: rotate(360deg); }
 }
 
-@keyframes mimi {
-    from {opacity:0}
-    to {opacity:1}
-}
-.muangay{
-	background-color: rgb(6, 232, 244);
-	font-size: 3rem;
-	animation: background-color 1s linear forwards;
-}
-.muangay{
-    animation: blink 1s infinite alternate ;
-    background-color: rgb(4, 0, 255) ;
-}
-@keyframes blink{
-
-    0% {
-        transform: scale(1) translateY(0px);
-        background-color: rgb(6, 232, 244);
-      }
-      50% {
-        transform: scale(1.05) translateY(-10px);
-        background-color: rgb(4, 0, 255) ;
-      }
-      100% {
-        transform: scale(1) translateY(0px);
-        background-color: rgb(6, 232, 244);
-      }
-
+.fade img {
+    width: 150px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
 }
 
-.doimau{
-    width: 400vh;      
+.fade img:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.fade img:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.cta {
+    padding: 15px 30px;
+    font-size: 20px;
+    color: white;
+    background: red;
+    border: none;
+    cursor: pointer;
+    animation: blink 1s infinite alternate;
+}
+@keyframes blink {
+    to {
+        background: orange;
+        transform: scale(1.05);
+    }
+}
+
+.slider {
+    width: 300px;
     overflow: hidden;
-    margin: 3vw auto;
+    margin: auto;
 }
-.slider{
+.slides {
     display: flex;
-    width: 50%;
     animation: slide 15s infinite;
 }
-.slider img{
-    width: 100%;
+.slides img {
+    width: 300px;
     flex-shrink: 0;
 }
-@keyframes slide{
-    0% {transform: translateX(0%); }
-    33% {transform: translateX(-100%); }
-    66% {transform: translateX(-200%); }
-    100% {transform: translateX(0%); }
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-300px); }
+    66% { transform: translateX(-600px); }
+    100% { transform: translateX(0); }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

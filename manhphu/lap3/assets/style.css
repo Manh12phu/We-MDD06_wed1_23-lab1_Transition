@@ -1,60 +1,67 @@
-body{
-	background-color:rgb(0, 0, 0);
-	color:rgb(73, 1, 255);
-	font-size: 25px;
-
-
-}
-.lightmode{
-	background-color: white;
-	color: black;
-	font-size: 25px;
-
-}
-section{ 
-    overflow: hidden;
-    border: 2px solid green;
-	border-radius: 25px;
-    
-}
-#title{
-    background-color: aqua;
-    text-align: center;
-    padding: 10px;
-
+body {
+  font-family: Arial;
+  margin: 0;
+  padding-top: 50px;
 }
 
-  body.dark {
-    background: #222;
-    color: #fff;
-  }
-  
-  button {
-    align-content: center;
-    font-size: 34px;
-    background-color: #227be0;
-    border-radius: 20px; 
-    transition: background-color 5s  ease;
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ddd;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
 }
-  
-  button:hover {
-    background: rgb(218, 4, 104);
-    color: #fff;
-  }
-  body.dark {
-    background: #ffffff;
-	color:rgb(73, 1, 255);
-  }
-  
-  button {
-    font-size: 34px;
-    background-color: #227be0;
-    border-radius: 20px;
-    transition: background-color 0.5s ease, color 0.5s ease;
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+.menu a.active {
+  color: red;
+  font-weight: bold;
 }
 
-button:hover {
-    background-color: rgb(218, 4, 104);
-	color:rgb(73, 1, 255);
+section {
+  height: 100vh;
+  padding: 50px;
+  border-bottom: 1px solid #ccc;
 }
 
+.dark {
+  background: #222;
+  color: #fff;
+}
+
+.box {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.6s;
+  background: lightblue;
+  margin: 20px;
+  padding: 30px;
+}
+.box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.jump.animate {
+  animation: jump 0.4s;
+}
+@keyframes jump {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.circle {
+  position: fixed;     
+  width: 30px;
+  height: 30px;
+  background: red;
+  border-radius: 50%;
+  pointer-events: none;   
+  z-index: 9999;          
+}
