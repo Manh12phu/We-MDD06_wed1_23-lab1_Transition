@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechShop</title>
+
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/libs/aos.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-top">
+    <div class="logo">TechShop</div>
+    <div class="menu-toggle">☰</div>
+    <nav class="menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-layer bg"></div>
+  <div class="hero-content">
+    <h1>Technology Future</h1>
+    <p>Mua sắm thông minh</p>
+    <button class="hero-btn">Khám phá</button>
+  </div>
+</section>
+
+<section class="shop" data-aos="fade-up">
+  <h2>Sản phẩm nổi bật</h2>
+
+  <div class="shop-grid">
+    <div class="product-card"
+      onclick="openDetail('iPhone 15 Pro Max','29.990.000đ','Chip A17 Pro','assets/img/iphone.png')">
+      <img src="assets/img/iphone.png">
+      <h3>iPhone 15 Pro Max</h3>
+      <p class="price">29.990.000đ</p>
+    </div>
+
+    <div class="product-card"
+      onclick="openDetail('Samsung S24 Ultra','22.990.000đ','Camera AI','assets/img/samsung.png')">
+      <img src="assets/img/samsung.png">
+      <h3>Samsung S24 Ultra</h3>
+      <p class="price">22.990.000đ</p>
+    </div>
+
+    <div class="product-card"
+      onclick="openDetail('Xiaomi 14','15.990.000đ','Pin trâu','assets/img/xiaomi.png')">
+      <img src="assets/img/xiaomi.png">
+      <h3>Xiaomi 14</h3>
+      <p class="price">15.990.000đ</p>
+    </div>
+
+    <div class="product-card"
+      onclick="openDetail('OPPO Find X7','18.990.000đ','Thiết kế sang','assets/img/oppo.png')">
+      <img src="assets/img/oppo.png">
+      <h3>OPPO Find X7</h3>
+      <p class="price">18.990.000đ</p>
+    </div>
+  </div>
+</section>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <img id="modalImg">
+    <h3 id="modalName"></h3>
+    <p id="modalDesc"></p>
+    <p id="modalPrice" class="price"></p>
+    <button class="buy-btn" onclick="addCart()">Mua hàng</button>
+    <button class="close-btn" onclick="closeDetail()">Đóng</button>
+  </div>
+</div>
+
+<section class="timeline">
+  <div class="time">2022 - Thành lập</div>
+  <div class="time">2023 - Phát triển</div>
+  <div class="time">2024 - Top shop</div>
+  <div class="time">2025 - Mở rộng</div>
+</section>
+
+<section class="gallery">
+  <img src="assets/img/g1.jpg">
+  <img src="assets/img/g2.jpg">
+  <img src="assets/img/g3.jpg">
+</section>
+
+<footer class="footer">
+  <p>© 2026 TechShop</p>
+</footer>
+
+<div class="toast">Thành công</div>
+
+<script src="assets/libs/aos.js"></script>
+<script src="assets/js/app.js"></script>
+<script>AOS.init();</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+body{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+}
+.but1{
+    align-content: center;
+    font-size: 34px;
+    background-color: #a7a522;
+    border-radius: 20px; 
+    transition: background-color 5s  ease;
+}
+.but1:hover{
+background-color: rgb(255, 5, 255);
+}
+#img{
+	
+	border-radius: 15px;
+	height: 60vh;
+	width: 80vh;
+	animation: scal1 1s ease-in forwards;
+
+}
+
+@keyframes scal1 {
+	0%{
+		transform: scale(1.2);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+#img:hover{
+	animation: scal2 1s ease-in forwards;
+}
+#bucanh{
+	height: 60vh;
+	width: 80vh;
+	overflow: hidden;
+	border: 3px solid brown;
+	border-radius: 20px;
+}
+@keyframes scal2 {
+	0%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(1.2);
+	}
+}
+
+.gachngang {
+    display: inline-block; 
+    position: relative;
+    font-size: 26px;
+	background: linear-gradient(#007bff, #007bff) no-repeat left bottom / 0 2px;
+    transition: background-size 1s ease ;
+}
+
+
+
+.gachngang:hover {
+    background-size: 100% 2px;
+}
